@@ -145,11 +145,11 @@
   <hr class="divider">
   <p class="center">Antes de seguir, respóndeme esto:</p>
   <!-- EDITAR: cambia la pregunta y las opciones por algo específico de ustedes -->
-  <p class="center" style="font-weight:600;">¿Hace cuánto que somos novios?</p>
+  <p class="center" style="font-weight:600;">¿Qué día decidimos que sea nuestra fecha?</p>
   <div class="quiz">
-    <button onclick="responder(this,false)">Seis meses</button>
-    <button onclick="responder(this,true)">Un mes</button>
-    <button onclick="responder(this,false)">Un año</button>
+    <button onclick="responder(this,false)">15 de Agosto</button>
+    <button onclick="responder(this,true)">19 de Agosto</button>
+    <button onclick="responder(this,false)">10 de Agosto</button>
   </div>
   <div class="feedback" id="fb"></div>
 </div>
@@ -160,7 +160,7 @@ function responder(btn, correcta){
   if(correcta){
     btn.style.background = 'var(--blush)';
     btn.style.borderColor = 'var(--rose)';
-    fb.textContent = 'Exacto. Un mes, y se ha sentido mejor que muchos años.';
+    fb.textContent = 'Exacto. Luego de ese día parecerí que fueron muchos años.';
     setTimeout(()=>{
       fb.innerHTML += '<div class="hint" style="margin-top:16px;border-top:none;padding-top:0;">Como premio por acertar, tienes un pequeño regalo: <a href="https://heart-sparkle--sebasperezbrion.replit.app" target="_blank" rel="noopener" style="color:var(--rose); font-weight:600;">ábrelo aquí</a>.</div><div class="hint">Pista: el tercer Bon o Bon está donde guardas las cosas que más quieres.</div>';
     }, 900);
