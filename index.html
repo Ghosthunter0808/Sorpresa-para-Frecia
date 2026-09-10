@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Para Frecia</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --plum: #3B1520;
+    --plum-deep: #2A0F17;
+    --paper: #F8F1E4;
+    --paper-soft: #F1E7D6;
+    --rose: #A73B49;
+    --gold: #C9A227;
+    --blush: #E9C6C9;
+    --ink: #2B2320;
+  }
+  *{ box-sizing: border-box; }
+  html, body{ margin:0; padding:0; }
+  body{
+    min-height:100vh;
+    background: var(--plum);
+    background-image:
+      radial-gradient(circle at 20% 10%, rgba(201,162,39,0.10), transparent 40%),
+      radial-gradient(circle at 85% 90%, rgba(233,198,201,0.08), transparent 45%);
+    font-family: 'Work Sans', sans-serif;
+    color: var(--ink);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding: 32px 16px;
+  }
+  .letter{
+    position:relative;
+    width:100%;
+    max-width: 520px;
+    background: var(--paper);
+    border-radius: 2px;
+    padding: 48px 40px 40px;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.35);
+  }
+  .letter::before{
+    content:"";
+    position:absolute;
+    top:-9px; left:0; right:0;
+    height: 10px;
+    background:
+      linear-gradient(135deg, var(--paper) 50%, transparent 50%) 0 0/16px 16px repeat-x,
+      linear-gradient(-135deg, var(--paper) 50%, transparent 50%) 0 0/16px 16px repeat-x;
+    background-color: var(--plum);
+  }
+  .seal{
+    width:56px; height:56px;
+    border-radius:50%;
+    background: radial-gradient(circle at 35% 30%, var(--rose), var(--plum-deep) 75%);
+    color: var(--gold);
+    display:flex; align-items:center; justify-content:center;
+    font-family:'Fraunces', serif;
+    font-size: 22px;
+    font-weight:600;
+    margin: 0 auto 22px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.25) inset, 0 3px 6px rgba(0,0,0,0.3);
+  }
+  h1{
+    font-family:'Fraunces', serif;
+    font-optical-sizing: auto;
+    font-weight:600;
+    font-size: clamp(28px, 6vw, 38px);
+    line-height:1.15;
+    text-align:center;
+    margin: 0 0 6px;
+    color: var(--plum-deep);
+  }
+  .eyebrow{
+    text-align:center;
+    font-size:13px;
+    letter-spacing:0.02em;
+    color: var(--rose);
+    margin: 0 0 28px;
+    font-weight:500;
+  }
+  p{
+    font-size:16px;
+    line-height:1.65;
+    max-width: 46ch;
+    margin: 0 auto 16px;
+  }
+  .center{ text-align:center; }
+  .divider{
+    width:64px; height:2px;
+    background: var(--gold);
+    margin: 26px auto;
+    border:none;
+    opacity:0.6;
+  }
+  .home-list{
+    list-style:none; padding:0; margin: 18px 0 0;
+    display:flex; flex-direction:column; gap:10px;
+  }
+  .home-list a{
+    display:block;
+    font-size:15px; font-weight:500;
+    color: var(--ink);
+    text-decoration:none;
+    background: var(--paper-soft);
+    border: 1px solid rgba(59,21,32,0.15);
+    border-radius:3px; padding:13px 16px;
+    transition: background 0.2s ease, border-color 0.2s ease;
+  }
+  .home-list a:hover{ background: var(--blush); border-color: var(--rose); }
+</style>
+</head>
+<body>
+<div class="letter">
+  <div class="seal">F</div>
+  <p class="eyebrow">Vista previa</p>
+  <h1>4 chocolates</h1>
+  <hr class="divider">
+  <p class="center">Cada Bon o Bon lleva su propio código QR, apuntando a uno de estos enlaces:</p>
+  <ul class="home-list">
+    <li><a href="./primer-chocolate/">Primer chocolate</a></li>
+    <li><a href="./segundo-chocolate/">Segundo chocolate</a></li>
+    <li><a href="./tercer-chocolate/">Tercer chocolate</a></li>
+    <li><a href="./ultimo-chocolate/">Último chocolate</a></li>
+  </ul>
+</div>
+</body>
+</html>
